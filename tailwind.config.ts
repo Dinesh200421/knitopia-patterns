@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,23 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom knitting-themed colors
+				wool: {
+					DEFAULT: '#F5F0E6',
+					light: '#FAF7F2',
+					dark: '#E5DFD3'
+				},
+				lavender: {
+					DEFAULT: '#9b87f5',
+					light: '#b3a4f7',
+					dark: '#7E69AB'
+				},
+				yarn: {
+					red: '#D46A6A',
+					blue: '#7097B3',
+					green: '#8AAD92',
+					yellow: '#E6C86E'
 				}
 			},
 			borderRadius: {
@@ -84,11 +102,19 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'knit': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-5px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'knit': 'knit 2s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'wool-texture': "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjZmFmN2YyIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiNlZmVhZTAiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=')"
 			}
 		}
 	},
